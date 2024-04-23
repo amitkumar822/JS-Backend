@@ -1,7 +1,18 @@
-# install:- npm init
+# 1 install:- npm init
 
-# install package:- npm i -D nodemon 
+# 2 install package:- npm i -D nodemon 
 - [Nodemon Link](https://www.npmjs.com/package/nodemon)
 
-# install package:- npm i -D prettier
+
+# 3 install package:- npm i -D prettier
 Note: This prettier is required because fromating your code 
+
+
+# 4 install package:- npm i dotenv
+- [DotEnv Link](https://www.npmjs.com/package/dotenv)
+
+
+# 5 install package:- npm install express
+
+# 6 install package:- npm install mongoose
+-[Mongoose Link](https://mongoosejs.com/)

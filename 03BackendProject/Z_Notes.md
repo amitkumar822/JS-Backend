@@ -14,5 +14,15 @@ Note: This prettier is required because fromating your code
 
 # 5 install package:- npm install express
 
+
 # 6 install package:- npm install mongoose
 -[Mongoose Link](https://mongoosejs.com/)
+
+
+# 7 install package:- npm i cookie-parser
+-[Cookie Link](https://www.npmjs.com/package/cookie-parser)
+
+
+# 8 install package:- npm i cors
+-[Cors Link](https://www.npmjs.com/package/cors)
+Note: This is required because frontend and backend both run same server or same port

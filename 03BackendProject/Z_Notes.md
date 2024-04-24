@@ -26,3 +26,14 @@ Note: This prettier is required because fromating your code
 # 8 install package:- npm i cors
 -[Cors Link](https://www.npmjs.com/package/cors)
 Note: This is required because frontend and backend both run same server or same port
+
+
+# 9 install package:- npm i mongoose-aggregate-paginate-v2
+-[Mongoose aggregate paginate Link](https://www.npmjs.com/package/mongoose-aggregate-paginate-v2)
+
+
+# 10 install package:- npm i bcrypt
+-[Bcrypt Link](https://www.npmjs.com/package/bcrypt)
+
+# 11 install package:- npm i jsonwebtoken
+-[JsonWebToken Link](https://www.npmjs.com/package/jsonwebtoken)

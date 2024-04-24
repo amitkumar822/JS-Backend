@@ -37,3 +37,13 @@ Note: This is required because frontend and backend both run same server or same
 
 # 11 install package:- npm i jsonwebtoken
 -[JsonWebToken Link](https://www.npmjs.com/package/jsonwebtoken)
+
+
+# 12 User cloudinary service use because stored some data (photos,videos) free
+# 👉 install package:- npm install cloudinary
+-[Cloudinary Service Link](https://console.cloudinary.com/pm/c-8311d0b3ecdcb8f0bfcb3720f04133/getting-started)
+
+
+# 13 install package:- npm i multer
+-[Multer Link](https://www.npmjs.com/package/multer)
+👉Nodes:- multer use because Middleware provides

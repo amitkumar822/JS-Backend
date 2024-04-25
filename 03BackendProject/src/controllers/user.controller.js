@@ -10,7 +10,7 @@ const registerUser = asyncHandler( async (req, res) => {
     //👉 get user details from frontend
     const {fullName, email, username, password} = req.body
     console.log("Email: ", email);
-    
+
 
     //👉 validation - not empty
     // if(fullName === ""){
@@ -22,7 +22,7 @@ const registerUser = asyncHandler( async (req, res) => {
     }
 
     //👉 check if user already exists: username, email
-    const existedUser = User.findOne({
+    const existedUser = await User.findOne({
         $or: ([{ username }, { email }])
     })
 

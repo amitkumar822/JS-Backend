@@ -1,3 +1,6 @@
+Server Link:-   http://localhost:8000/api/v1/users/register
+
+
 # 1 install:- npm init
 
 # 2 install package:- npm i -D nodemon 

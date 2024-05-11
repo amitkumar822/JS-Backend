@@ -74,7 +74,7 @@ const registerUser = asyncHandler( async (req, res) => {
         coverImage: coverImage?.url || "",
         email,
         password,
-        username: username.toLowerCase()
+        username: username?.toLowerCase()
     })
 
     //👉 remove password and refresh token field from response
@@ -104,7 +104,7 @@ const loginUser = asyncHandler( async (req, res) => {
 
     // find the user
     const user = await User.findOne({
-        $or: ([{email}, {username}])
+        $or: ([{username}, {email}])
     })
     
     if(!user) {
@@ -149,7 +149,7 @@ const logoutUser = asyncHandler( async(req, res) => {
         req.user._id,
         {
             $set: {
-                refreshToken: undefined,    
+                refreshToken: undefined    
             }
         },
         {

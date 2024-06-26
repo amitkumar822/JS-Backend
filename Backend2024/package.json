@@ -1,0 +1,16 @@
+{
+  "name": "js-backend",
+  "version": "1.0.0",
+  "description": "A JavaScript Backend Start 24-06-024",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Amit Kumar Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.2"
+  }
+}

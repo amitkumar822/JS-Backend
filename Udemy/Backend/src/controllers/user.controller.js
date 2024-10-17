@@ -1,7 +1,7 @@
 import { asyncHandler } from '../utils/asyncHandler.js'
 import { ApiError } from '../utils/ApiError.js'
 import { User } from '../models/user.model.js'
-import { uploadOnCloudinary } from '../utils/Cloudinary.js'
+import { uploadOnCloudinary } from '../utils/cloudinary.js'
 import { ApiResponse } from '../utils/ApiResponse.js'
 
 
@@ -47,7 +47,7 @@ const registerUser = asyncHandler( async (req, res) => {
     //👉 create user object - create entry in db
     const user = await User.create({
         fullName,
-        avater: avatar.url, //her some change avater to avatar
+        avatar: avatar.url, //her some change avater to avatar
         coverImage: coverImage?.url || "",
         email,
         password,

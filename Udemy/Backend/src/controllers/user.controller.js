@@ -11,8 +11,8 @@ const options = {
   secure: true,
 };
 
-// access and reftoken
-const generateAccessAndRefereshToken = async (userId) => {
+// access and reftoken generateAccessAndRefereshTokenss
+const generateAccessAndRefereshTokens = async (userId) => {
   try {
     const user = await User.findById(userId);
     const accessToken = user.generateAccessToken();
@@ -25,7 +25,7 @@ const generateAccessAndRefereshToken = async (userId) => {
   } catch (error) {
     throw new ApiError(
       500,
-      "Something went wrong while generating refresh and access token"
+      "Something went wrong while generating referesh and access token"
     );
   }
 };
@@ -125,7 +125,7 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 
   // access and reftoken (access and reftoken upper define)
-  const { accessToken, refreshToken } = await generateAccessAndRefereshToken(
+  const { accessToken, refreshToken } = await generateAccessAndRefereshTokens(
     user._id
   );
 
@@ -156,8 +156,8 @@ const logoutUser = asyncHandler(async (req, res) => {
     // here req.user (user) come to auth.middleware
     req.user._id,
     {
-      $set: {
-        refreshToken: undefined,
+      $unset: {
+        refreshToken: 1, // this removes the field from document
       },
     },
     {
@@ -174,7 +174,9 @@ const logoutUser = asyncHandler(async (req, res) => {
 });
 
 const refreshAccessToken = asyncHandler(async (req, res) => {
-  const incomingRefreshToken = req.cookie.refreshToken || req.body.refreshToken;
+  const incomingRefreshToken =
+    req.cookies.refreshToken || req.body.refreshToken;
+  console.log("refreshToken", incomingRefreshToken);
 
   if (!incomingRefreshToken) {
     throw new ApiError(401, "unauthorize request");
@@ -197,7 +199,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
     }
 
     const { accessToken, newRefreshToken } =
-      await generateAccessAndRefereshToken(user._id);
+      await generateAccessAndRefereshTokens(user._id);
 
     res
       .status(200)
